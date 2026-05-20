@@ -16,7 +16,7 @@ export default function SocialProof() {
               <Star key={i} size={16} className="text-amber fill-amber" />
             ))}
           </div>
-          <span className="font-slab text-xl text-amber">4.8</span>
+          <span className="font-slab text-xl text-amber">5.0</span>
           <span className="font-body text-parchment/50 text-xs uppercase tracking-wider">{tx.rating}</span>
         </div>
 
