@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1050 600">
+  <defs>
+    <style><![CDATA[@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Dancing+Script:wght@700&family=Lato:wght@300;400&display=swap');]]></style>
+    <filter id="grain-f" x="0%" y="0%" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.72" numOctaves="4" stitchTiles="stitch" result="n"/>
+      <feColorMatrix type="saturate" values="0" in="n" result="g"/>
+      <feBlend in="SourceGraphic" in2="g" mode="overlay"/>
+    </filter>
+  </defs>
+
+  <!-- Navy background -->
+  <rect width="1050" height="600" fill="#1B3564"/>
+
+  <!-- Grain overlay -->
+  <rect width="1050" height="600" fill="#1B3564" filter="url(#grain-f)" opacity="0.055"/>
+
+  <!-- Amber top rule -->
+  <rect x="0" y="0" width="1050" height="4" fill="#C4880B"/>
+  <!-- Amber bottom rule -->
+  <rect x="0" y="596" width="1050" height="4" fill="#C4880B"/>
+  <!-- Side hairlines -->
+  <rect x="0"    y="4" width="2"  height="592" fill="#C4880B" opacity="0.35"/>
+  <rect x="1048" y="4" width="2"  height="592" fill="#C4880B" opacity="0.35"/>
+
+  <!-- Inner border frame (double) -->
+  <rect x="26" y="26" width="998" height="548" fill="none" stroke="#C4880B" stroke-width="1"   opacity="0.30"/>
+  <rect x="33" y="33" width="984" height="534" fill="none" stroke="#C4880B" stroke-width="0.4" opacity="0.18"/>
+
+  <!-- Star mark: 100×100 scaled 1.72× → 172px, centred at (525, 218) -->
+  <g transform="translate(439,132) scale(1.72)">
+    <path d="M50,2 L58,42 L98,50 L58,58 L50,98 L42,58 L2,50 L42,42 Z" fill="#C4880B"/>
+  </g>
+
+  <!-- Flanking ornament rules -->
+  <line x1="148" y1="298" x2="368" y2="298" stroke="#C4880B" stroke-width="0.8" opacity="0.28"/>
+  <line x1="682" y1="298" x2="902" y2="298" stroke="#C4880B" stroke-width="0.8" opacity="0.28"/>
+  <text x="525" y="306" text-anchor="middle"
+    font-family="Georgia,serif" font-size="16" fill="#C4880B" opacity="0.42">✦</text>
+
+  <!-- Wordmark: "La FONDA" — Dancing Script + Alfa Slab One -->
+  <!-- text-anchor middle centres the combined tspan block at x=525 -->
+  <text x="525" y="390" text-anchor="middle" fill="#FEF3D0">
+    <tspan font-family="'Dancing Script',cursive" font-size="82" font-weight="700" font-style="italic">La </tspan>
+    <tspan font-family="'Alfa Slab One',serif" font-size="78">FONDA</tspan>
+  </text>
+
+  <!-- Tagline -->
+  <text x="525" y="448" text-anchor="middle"
+    font-family="Lato,sans-serif" font-size="21" font-weight="300"
+    letter-spacing="6.5" fill="#FEF3D0" fill-opacity="0.50">
+    COLOMBIAN RESTAURANT  ·  WELLINGTON
+  </text>
+
+  <!-- Bottom brand mantra -->
+  <text x="525" y="524" text-anchor="middle"
+    font-family="Lato,sans-serif" font-size="16" font-weight="300"
+    letter-spacing="5" fill="#C4880B" fill-opacity="0.42">
+    ✦   NATURAL  ·  AUTHENTIC  ·  DELICIOUS   ✦
+  </text>
+</svg>

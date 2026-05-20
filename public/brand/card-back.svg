@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1050 600">
+  <defs>
+    <style><![CDATA[@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Dancing+Script:wght@700&family=Lato:wght@300;400&display=swap');]]></style>
+  </defs>
+
+  <!-- Parchment background -->
+  <rect width="1050" height="600" fill="#FEF3D0"/>
+
+  <!-- Navy top/bottom rules -->
+  <rect x="0" y="0"   width="1050" height="3" fill="#1B3564"/>
+  <rect x="0" y="597" width="1050" height="3" fill="#1B3564"/>
+
+  <!-- Amber border frame (outer + inner hairline) -->
+  <rect x="26" y="26" width="998" height="548" fill="none" stroke="#C4880B" stroke-width="1.25"/>
+  <rect x="32" y="32" width="986" height="536" fill="none" stroke="#C4880B" stroke-width="0.4" opacity="0.38"/>
+
+  <!-- Mini mark: top-left -->
+  <g transform="translate(48,44) scale(0.30)">
+    <path d="M50,2 L58,42 L98,50 L58,58 L50,98 L42,58 L2,50 L42,42 Z" fill="#C4880B"/>
+  </g>
+
+  <!-- Vertical divider right of mark -->
+  <line x1="84" y1="46" x2="84" y2="124" stroke="#C4880B" stroke-width="0.8" opacity="0.38"/>
+
+  <!-- Mini wordmark -->
+  <text y="80" fill="#1B3564">
+    <tspan x="96" font-family="'Dancing Script',cursive" font-size="24" font-weight="700" font-style="italic">La </tspan>
+    <tspan font-family="'Alfa Slab One',serif" font-size="23">FONDA</tspan>
+  </text>
+  <text x="96" y="100"
+    font-family="Lato,sans-serif" font-size="10.5" font-weight="300"
+    letter-spacing="2.5" fill="#1B3564" fill-opacity="0.42">
+    COLOMBIAN RESTAURANT
+  </text>
+
+  <!-- Horizontal rule below header -->
+  <line x1="46" y1="146" x2="672" y2="146" stroke="#C4880B" stroke-width="0.8" opacity="0.38"/>
+
+  <!-- ── Contact Details (left column) ── -->
+
+  <!-- ADDRESS -->
+  <text x="56" y="187"
+    font-family="Lato,sans-serif" font-size="15" font-weight="300"
+    letter-spacing="2.5" fill="#1B3564" fill-opacity="0.42">ADDRESS</text>
+  <text x="56" y="213" font-family="Lato,sans-serif" font-size="25" fill="#1B3564">101 Vivian Street, Te Aro</text>
+  <text x="56" y="240" font-family="Lato,sans-serif" font-size="25" fill="#1B3564">Wellington 6011</text>
+
+  <!-- PHONE -->
+  <text x="56" y="282"
+    font-family="Lato,sans-serif" font-size="15" font-weight="300"
+    letter-spacing="2.5" fill="#1B3564" fill-opacity="0.42">PHONE</text>
+  <text x="56" y="308" font-family="Lato,sans-serif" font-size="25" fill="#1B3564">04 381 0229</text>
+
+  <!-- WEB -->
+  <text x="56" y="350"
+    font-family="Lato,sans-serif" font-size="15" font-weight="300"
+    letter-spacing="2.5" fill="#1B3564" fill-opacity="0.42">WEB</text>
+  <text x="56" y="376" font-family="Lato,sans-serif" font-size="25" fill="#C4880B">www.lafonda.co.nz</text>
+
+  <!-- EMAIL -->
+  <text x="56" y="418"
+    font-family="Lato,sans-serif" font-size="15" font-weight="300"
+    letter-spacing="2.5" fill="#1B3564" fill-opacity="0.42">EMAIL</text>
+  <text x="56" y="444" font-family="Lato,sans-serif" font-size="25" fill="#1B3564">Hola@lafonda.co.nz</text>
+
+  <!-- INSTAGRAM -->
+  <text x="56" y="486"
+    font-family="Lato,sans-serif" font-size="15" font-weight="300"
+    letter-spacing="2.5" fill="#1B3564" fill-opacity="0.42">INSTAGRAM</text>
+  <text x="56" y="512" font-family="Lato,sans-serif" font-size="25" fill="#1B3564">@lafonda.2026</text>
+
+  <!-- ── Vertical divider ── -->
+  <line x1="700" y1="146" x2="700" y2="554" stroke="#C4880B" stroke-width="0.8" opacity="0.38"/>
+
+  <!-- ── QR Code (right column) ── -->
+  <text x="841" y="174"
+    text-anchor="middle"
+    font-family="Lato,sans-serif" font-size="13" font-weight="300"
+    letter-spacing="3" fill="#1B3564" fill-opacity="0.40">SCAN TO VISIT</text>
+
+  <!-- QR border -->
+  <rect x="724" y="196" width="234" height="234"
+    fill="#FEF3D0" stroke="#1B3564" stroke-width="1" opacity="0.18"/>
+
+  <!-- QR code as nested SVG — viewBox matches qrcode output dimension -->
+  <svg x="726" y="198" width="230" height="230" viewBox="0 0 27 27">
+    <rect width="27" height="27" fill="#FEF3D0"/>
+    <path fill="#FEF3D0" d="M0 0h27v27H0z"/><path stroke="#1B3564" d="M1 1.5h7m2 0h2m1 0h1m3 0h1m1 0h7M1 2.5h1m5 0h1m2 0h1m2 0h1m1 0h2m2 0h1m5 0h1M1 3.5h1m1 0h3m1 0h1m1 0h1m1 0h1m5 0h1m1 0h1m1 0h3m1 0h1M1 4.5h1m1 0h3m1 0h1m1 0h2m3 0h2m3 0h1m1 0h3m1 0h1M1 5.5h1m1 0h3m1 0h1m1 0h1m1 0h1m1 0h1m3 0h1m1 0h1m1 0h3m1 0h1M1 6.5h1m5 0h1m1 0h5m2 0h2m1 0h1m5 0h1M1 7.5h7m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h7M9 8.5h1m5 0h1m1 0h1M1 9.5h1m1 0h5m2 0h5m4 0h5M1 10.5h1m1 0h1m1 0h2m4 0h1m1 0h2m2 0h2m1 0h1m3 0h1M1 11.5h1m4 0h2m3 0h1m2 0h3m1 0h5m1 0h2M2 12.5h5m1 0h1m1 0h1m2 0h1m3 0h2m1 0h1m4 0h1M2 13.5h1m2 0h3m1 0h2m2 0h4m1 0h4m1 0h3M1 14.5h5m2 0h1m1 0h2m5 0h2m1 0h1m1 0h1m1 0h1M1 15.5h1m3 0h6m1 0h3m1 0h7m1 0h2M1 16.5h1m1 0h1m1 0h1m3 0h1m2 0h1m2 0h2m1 0h1m1 0h2m3 0h1M1 17.5h1m1 0h1m2 0h3m1 0h12m1 0h1M9 18.5h3m1 0h2m1 0h2m3 0h2M1 19.5h7m2 0h2m1 0h3m1 0h1m1 0h1m1 0h1m1 0h3M1 20.5h1m5 0h1m1 0h1m1 0h3m1 0h1m1 0h1m3 0h2m1 0h2M1 21.5h1m1 0h3m1 0h1m1 0h1m1 0h2m1 0h1m1 0h6m1 0h1M1 22.5h1m1 0h3m1 0h1m1 0h4m1 0h1m1 0h1m2 0h1m1 0h5M1 23.5h1m1 0h3m1 0h1m1 0h1m3 0h3m1 0h1m4 0h2m1 0h1M1 24.5h1m5 0h1m2 0h1m1 0h1m3 0h3m1 0h3m2 0h1M1 25.5h7m1 0h1m1 0h5m4 0h6"/>
+  </svg>
+
+  <!-- QR caption -->
+  <text x="841" y="456"
+    text-anchor="middle"
+    font-family="Lato,sans-serif" font-size="12" font-weight="300"
+    letter-spacing="2" fill="#1B3564" fill-opacity="0.36">lafonda.co.nz</text>
+
+  <!-- Bottom ornament -->
+  <text x="841" y="563"
+    text-anchor="middle"
+    font-family="Georgia,serif" font-size="18" fill="#C4880B" opacity="0.40">✦</text>
+</svg>
