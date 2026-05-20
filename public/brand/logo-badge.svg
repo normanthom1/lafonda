@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <defs>
+    <style><![CDATA[@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Lato:wght@300&display=swap');]]></style>
+    <!-- Short CW arc through the top: left (20,100) → top (100,20) → right (180,100) -->
+    <path id="badge-top-arc" d="M 20,100 A 80,80 0 0,1 180,100"/>
+  </defs>
+  <!-- Navy fill -->
+  <circle cx="100" cy="100" r="97" fill="#1B3564"/>
+  <!-- Outer amber border -->
+  <circle cx="100" cy="100" r="94" fill="none" stroke="#C4880B" stroke-width="1.5"/>
+  <!-- Inner amber border -->
+  <circle cx="100" cy="100" r="86" fill="none" stroke="#C4880B" stroke-width="0.75" opacity="0.4"/>
+  <!-- Star mark: 50x50 centred at 100,100 → translate(75,75) scale(0.5) -->
+  <g transform="translate(75,68) scale(0.5)">
+    <path d="M50,2 L58,42 L98,50 L58,58 L50,98 L42,58 L2,50 L42,42 Z" fill="#C4880B"/>
+  </g>
+  <!-- Horizontal rule below mark -->
+  <line x1="64" y1="132" x2="136" y2="132" stroke="#C4880B" stroke-width="0.75" opacity="0.45"/>
+  <!-- "COLOMBIAN RESTAURANT" — centred text below mark -->
+  <text x="100" y="147" text-anchor="middle" font-family="Lato, sans-serif" font-size="7.5" font-weight="300" letter-spacing="2" fill="#FEF3D0" fill-opacity="0.7">COLOMBIAN RESTAURANT</text>
+  <!-- "WELLINGTON · N.Z." — bottom text -->
+  <text x="100" y="166" text-anchor="middle" font-family="Lato, sans-serif" font-size="7" font-weight="300" letter-spacing="2.5" fill="#C4880B" fill-opacity="0.8">WELLINGTON · N.Z.</text>
+  <!-- "LA FONDA" arched along the top -->
+  <text font-family="'Alfa Slab One', serif" font-size="13" fill="#FEF3D0" letter-spacing="5">
+    <textPath href="#badge-top-arc" startOffset="50%" text-anchor="middle">LA FONDA</textPath>
+  </text>
+</svg>

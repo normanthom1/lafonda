@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 534">
+  <rect width="800" height="534" fill="#2E1A0E"/>
+  <rect x="22" y="22" width="756" height="490" fill="none" stroke="#C4880B" stroke-width="1.5"/>
+  <rect x="28" y="28" width="744" height="478" fill="none" stroke="#C4880B" stroke-width="0.5" opacity="0.4"/>
+  <line x1="80" y1="248" x2="290" y2="248" stroke="#EDD089" stroke-width="0.8" opacity="0.45"/>
+  <line x1="510" y1="248" x2="720" y2="248" stroke="#EDD089" stroke-width="0.8" opacity="0.45"/>
+  <line x1="80" y1="322" x2="290" y2="322" stroke="#EDD089" stroke-width="0.8" opacity="0.45"/>
+  <line x1="510" y1="322" x2="720" y2="322" stroke="#EDD089" stroke-width="0.8" opacity="0.45"/>
+  <text x="400" y="215" text-anchor="middle" font-family="Georgia, serif" font-size="22" fill="#EDD089">✦</text>
+  <text x="400" y="274" text-anchor="middle" font-family="Georgia, serif" font-size="52" font-weight="bold" fill="#FEF3D0" letter-spacing="3">CHURRASCO</text>
+  <text x="400" y="312" text-anchor="middle" font-family="Georgia, serif" font-size="12" fill="#EDD089" letter-spacing="10">SIRLOIN · A LA PARRILLA</text>
+  <text x="400" y="358" text-anchor="middle" font-family="Georgia, serif" font-size="22" fill="#EDD089">✦</text>
+</svg>

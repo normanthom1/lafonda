@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 52">
+  <defs>
+    <style><![CDATA[@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Dancing+Script:wght@700&family=Lato:wght@300&display=swap');]]></style>
+  </defs>
+  <!-- Background -->
+  <rect width="240" height="52" fill="#FEF3D0"/>
+  <!-- Mark (100x100 scaled 0.48, centred vertically in 52px) -->
+  <g transform="translate(2,2) scale(0.48)">
+    <path d="M50,2 L58,42 L98,50 L58,58 L50,98 L42,58 L2,50 L42,42 Z" fill="#C4880B"/>
+  </g>
+  <!-- "La" in Dancing Script -->
+  <text y="33" fill="#1B3564">
+    <tspan x="58" font-family="'Dancing Script', cursive" font-size="24" font-weight="700" font-style="italic">La</tspan>
+    <tspan dx="5" font-family="'Alfa Slab One', serif" font-size="23">FONDA</tspan>
+  </text>
+  <!-- Tagline -->
+  <text x="59" y="45" font-family="Lato, sans-serif" font-size="7.5" font-weight="300" letter-spacing="2.5" fill="#1B3564" fill-opacity="0.55">COLOMBIAN RESTAURANT</text>
+</svg>
