@@ -6,6 +6,7 @@ import Section from '../components/Section'
 import Footer from '../components/Footer'
 import { useLang } from '../context/LanguageContext'
 import { t } from '../data/translations'
+import { photo } from '../utils/photo'
 
 const icons = [Briefcase, Users, Music]
 const inputCls = 'border-2 border-amber/30 bg-parchment rounded-sm px-4 py-3 text-sm font-body text-brown outline-none focus:border-amber transition-colors w-full'
@@ -31,7 +32,7 @@ export default function Events() {
       {/* Hero */}
       <div className="relative navy-banner bg-navy pt-28 pb-20 px-4 text-center overflow-hidden">
         <div className="absolute inset-0 opacity-10">
-          <img src="/photos/bandeja.jpg" alt="" className="w-full h-full object-cover" />
+          <img src={photo('bandeja.jpg')} alt="" className="w-full h-full object-cover" />
         </div>
         <div className="relative">
           <div className="inline-block ribbon mb-5 text-xs font-slab tracking-[0.25em] uppercase">

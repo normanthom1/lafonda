@@ -2,6 +2,7 @@ import { motion } from 'framer-motion'
 import { CalendarDays, ChevronDown, UtensilsCrossed, Flame, Drumstick, Star, Phone } from 'lucide-react'
 import CTAButton from '../components/CTAButton'
 import { location } from '../data/location'
+import { photo } from '../utils/photo'
 import SocialProof from '../components/SocialProof'
 import DishCard from '../components/DishCard'
 import Section from '../components/Section'
@@ -11,10 +12,10 @@ import { useLang } from '../context/LanguageContext'
 import { t } from '../data/translations'
 
 const signatureDishes = [
-  { name: 'Parrillada La Fonda', descriptionEs: 'La parrillada colombiana definitiva para dos — lomo, chuletas de cerdo, cordero, chorizo, morcilla, costillas de res y todos los acompañamientos.', description: 'The ultimate Colombian BBQ feast for two — sirloin, pork chops, lamb, chorizo, morcilla, beef ribs and all the trimmings.', price: '$110', image: '/photos/bandeja.jpg', highlight: true },
-  { name: 'Churrasco', descriptionEs: 'Clásico lomo de res a la parrilla con arepa, papas al horno o fritas, ensalada y chimichurri.', description: 'Classic sirloin steak, grilled to perfection, with arepa, baked potatoes or fries, salad and chimichurri.', price: '$40', image: '/photos/steak.jpg' },
-  { name: '500g Slow-Cook Beef Ribs', descriptionEs: 'Marinadas en cerveza y cocidas a fuego lento hasta que la carne se desprende del hueso.', description: 'Beer-marinated and slow-cooked until the meat falls off the bone. Served with all the Colombian sides.', price: '$60', image: '/photos/menu.jpg' },
-  { name: 'Pork Belly', descriptionEs: 'Panza de cerdo cocida a fuego lento con frijoles al estilo colombiano, arroz, ensalada y arepa.', description: 'Slow-cooked pork belly with Colombian-style kidney beans, rice, salad and arepa.', price: '$40', image: '/photos/sugarcane.jpg' },
+  { name: 'Parrillada La Fonda', descriptionEs: 'La parrillada colombiana definitiva para dos — lomo, chuletas de cerdo, cordero, chorizo, morcilla, costillas de res y todos los acompañamientos.', description: 'The ultimate Colombian BBQ feast for two — sirloin, pork chops, lamb, chorizo, morcilla, beef ribs and all the trimmings.', price: '$110', image: photo('bandeja.jpg'), highlight: true },
+  { name: 'Churrasco', descriptionEs: 'Clásico lomo de res a la parrilla con arepa, papas al horno o fritas, ensalada y chimichurri.', description: 'Classic sirloin steak, grilled to perfection, with arepa, baked potatoes or fries, salad and chimichurri.', price: '$40', image: photo('steak.jpg') },
+  { name: '500g Slow-Cook Beef Ribs', descriptionEs: 'Marinadas en cerveza y cocidas a fuego lento hasta que la carne se desprende del hueso.', description: 'Beer-marinated and slow-cooked until the meat falls off the bone. Served with all the Colombian sides.', price: '$60', image: photo('menu.jpg') },
+  { name: 'Pork Belly', descriptionEs: 'Panza de cerdo cocida a fuego lento con frijoles al estilo colombiano, arroz, ensalada y arepa.', description: 'Slow-cooked pork belly with Colombian-style kidney beans, rice, salad and arepa.', price: '$40', image: photo('sugarcane.jpg') },
 ]
 
 const menuCategories = {
@@ -57,7 +58,7 @@ export default function Home() {
       {/* ── Hero ── */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
-          <img src="/photos/bandeja.jpg" alt="La Fonda Colombian food" className="w-full h-full object-cover" />
+          <img src={photo('bandeja.jpg')} alt="La Fonda Colombian food" className="w-full h-full object-cover" />
           <div className="absolute inset-0 bg-gradient-to-b from-navy/85 via-navy/65 to-navy/90" />
           {/* Grain on hero */}
           <div className="absolute inset-0 opacity-20"
@@ -166,7 +167,7 @@ export default function Home() {
           </div>
           <div className="vintage-card overflow-hidden p-0 mb-7">
             <img
-              src="/photos/sunday-lechon.jpg"
+              src={photo('sunday-lechon.jpg')}
               alt="Sunday Special — Lechón Colombian Style"
               loading="lazy"
               className="w-full block"
@@ -239,7 +240,7 @@ export default function Home() {
           </div>
           <div className="overflow-hidden order-1 md:order-2 min-h-[280px]">
             <img
-              src="/photos/takeaway.jpg"
+              src={photo('takeaway.jpg')}
               alt="La Fonda Takeaway — Colombian food to go"
               loading="lazy"
               className="w-full h-full object-cover object-center"
@@ -252,7 +253,7 @@ export default function Home() {
       <div className="bg-navy navy-banner py-16 md:py-24 px-4">
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
           <div className="rounded-sm overflow-hidden aspect-square border-2 border-amber/30">
-            <img src="/photos/sugarcane.jpg" alt="Colombian culture" loading="lazy" className="w-full h-full object-cover" />
+            <img src={photo('sugarcane.jpg')} alt="Colombian culture" loading="lazy" className="w-full h-full object-cover" />
           </div>
           <div>
             <div className="ornament text-amber/50 text-xs mb-4">

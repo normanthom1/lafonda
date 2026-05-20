@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion'
 import { Leaf, Users, Globe, Mountain } from 'lucide-react'
+import { photo } from '../utils/photo'
 import Section from '../components/Section'
 import CTAButton from '../components/CTAButton'
 import Footer from '../components/Footer'
@@ -25,7 +26,7 @@ export default function About() {
       <Section>
         <div className="grid md:grid-cols-2 gap-14 items-center">
           <div className="rounded-sm overflow-hidden aspect-[3/4] border-2 border-amber/30 shadow-lg">
-            <img src="/photos/sugarcane.jpg" alt="La Fonda story" loading="lazy" className="w-full h-full object-cover" />
+            <img src={photo('sugarcane.jpg')} alt="La Fonda story" loading="lazy" className="w-full h-full object-cover" />
           </div>
           <div>
             <div className="ornament text-amber text-xs mb-5">
@@ -68,7 +69,7 @@ export default function About() {
 
       {/* Image strip */}
       <div className="grid grid-cols-2 md:grid-cols-4 h-56 md:h-72">
-        {['/photos/bandeja.jpg','/photos/steak.jpg','/photos/menu.jpg','/photos/sugarcane.jpg'].map((src,i)=>(
+        {[photo('bandeja.jpg'),photo('steak.jpg'),photo('menu.jpg'),photo('sugarcane.jpg')].map((src,i)=>(
           <div key={i} className="overflow-hidden relative">
             <img src={src} alt="" loading="lazy" className="w-full h-full object-cover hover:scale-110 transition-transform duration-700" />
             <div className="absolute inset-0 bg-navy/20" />

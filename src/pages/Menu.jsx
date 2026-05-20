@@ -7,6 +7,7 @@ import CTAButton from '../components/CTAButton'
 import Footer from '../components/Footer'
 import { useLang } from '../context/LanguageContext'
 import { t } from '../data/translations'
+import { photo } from '../utils/photo'
 
 const categoryEs = {
   'Parrilladas & Beef Cuts': 'Parrilladas y Cortes de Res',
@@ -116,7 +117,7 @@ export default function Menu() {
       <div className="max-w-6xl mx-auto px-4 pb-14">
         <div className="vintage-card overflow-hidden grid sm:grid-cols-[240px_1fr] items-center">
           <img
-            src="/photos/lemonade.jpg"
+            src={photo('lemonade.jpg')}
             alt="Sugar Cane Lemonade $3"
             loading="lazy"
             className="w-full block"
