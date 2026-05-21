@@ -23,7 +23,7 @@ export default function Events() {
     e.preventDefault()
     const subject = encodeURIComponent(`Event Enquiry — ${form.type} for ${form.guests} guests`)
     const body = encodeURIComponent(`Name: ${form.name}\nEmail: ${form.email}\nEvent Type: ${form.type}\nDate: ${form.date}\nGuests: ${form.guests}\n\nMessage:\n${form.message}`)
-    window.location.href = `mailto:hello@lafonda.co.nz?subject=${subject}&body=${body}`
+    window.location.href = `mailto:Hola@lafonda.co.nz?subject=${subject}&body=${body}`
     setSubmitted(true)
   }
 

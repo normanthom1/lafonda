@@ -22,7 +22,7 @@ export default function Book() {
     e.preventDefault()
     const subject = encodeURIComponent(`Table Reservation — ${form.date} at ${form.time} (${form.guests} guests)`)
     const body = encodeURIComponent(`Name: ${form.name}\nEmail: ${form.email}\nPhone: ${form.phone}\nDate: ${form.date}\nTime: ${form.time}\nGuests: ${form.guests}\n\nNotes:\n${form.notes}`)
-    window.location.href = `mailto:hello@lafonda.co.nz?subject=${subject}&body=${body}`
+    window.location.href = `mailto:Hola@lafonda.co.nz?subject=${subject}&body=${body}`
     setSubmitted(true)
   }
 

@@ -69,9 +69,14 @@ export default function About() {
 
       {/* Image strip */}
       <div className="grid grid-cols-2 md:grid-cols-4 h-56 md:h-72">
-        {[photo('bandeja.jpg'),photo('steak.jpg'),photo('menu.jpg'),photo('sugarcane.jpg')].map((src,i)=>(
+        {[
+          { src: photo('bandeja.jpg'), alt: 'Parrillada La Fonda — Colombian BBQ feast Wellington' },
+          { src: photo('steak.jpg'), alt: 'Churrasco grilled steak — South American BBQ Te Aro' },
+          { src: photo('menu.jpg'), alt: 'Slow-cooked beef ribs — authentic Colombian food Wellington' },
+          { src: photo('sugarcane.jpg'), alt: 'Colombian sugarcane lemonade — La Fonda Wellington' },
+        ].map(({src,alt},i)=>(
           <div key={i} className="overflow-hidden relative">
-            <img src={src} alt="" loading="lazy" className="w-full h-full object-cover hover:scale-110 transition-transform duration-700" />
+            <img src={src} alt={alt} loading="lazy" className="w-full h-full object-cover hover:scale-110 transition-transform duration-700" />
             <div className="absolute inset-0 bg-navy/20" />
           </div>
         ))}

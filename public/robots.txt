@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://normanthom1.github.io/lafonda/sitemap.xml
