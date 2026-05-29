@@ -58,7 +58,14 @@ export default function Home() {
       {/* ── Hero ── */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
-          <img src={photo('bandeja.jpg')} alt="La Fonda Colombian food" className="w-full h-full object-cover" />
+          <motion.img
+            src={photo('bandeja.jpg')}
+            alt="La Fonda Colombian food"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1.2, ease: 'easeOut' }}
+            className="ken-burns w-full h-full object-cover"
+          />
           <div className="absolute inset-0 bg-gradient-to-b from-navy/85 via-navy/65 to-navy/90" />
           {/* Grain on hero */}
           <div className="absolute inset-0 opacity-20"

@@ -23,10 +23,12 @@ export default function MobileBottomNav() {
             <Link
               key={to}
               to={to}
-              className={`flex-1 flex flex-col items-center gap-1 py-3 font-body text-[10px] font-bold uppercase tracking-widest transition-colors ${
-                active ? 'text-amber' : 'text-parchment/50'
+              aria-current={active ? 'page' : undefined}
+              className={`relative flex-1 flex flex-col items-center gap-1 py-3 font-body text-[10px] font-bold uppercase tracking-widest transition-colors ${
+                active ? 'text-amber bg-amber/5' : 'text-parchment/50 hover:text-parchment/80'
               }`}
             >
+              {active && <span className="absolute top-0 left-1/2 -translate-x-1/2 h-0.5 w-8 bg-amber rounded-full" />}
               <Icon size={18} />
               <span>{label}</span>
             </Link>
