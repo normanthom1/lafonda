@@ -3,6 +3,7 @@ import { useEffect } from 'react'
 import { LanguageProvider } from './context/LanguageContext'
 import Navbar from './components/Navbar'
 import MobileBottomNav from './components/MobileBottomNav'
+import BackToTop from './components/BackToTop'
 import Home from './pages/Home'
 import Menu from './pages/Menu'
 import Book from './pages/Book'
@@ -33,6 +34,7 @@ function App() {
             <Route path="/contact" element={<Contact />} />
           </Routes>
         </main>
+        <BackToTop />
         <MobileBottomNav />
       </div>
     </HashRouter>

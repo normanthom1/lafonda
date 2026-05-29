@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { Menu, X } from 'lucide-react'
+import { motion, useScroll, useSpring } from 'framer-motion'
 import { useLang } from '../context/LanguageContext'
 import { t } from '../data/translations'
 import Logo from './Logo'
@@ -11,6 +12,10 @@ export default function Navbar() {
   const location = useLocation()
   const { lang, toggle } = useLang()
   const tx = t[lang].nav
+
+  // Reading-progress indicator woven into the navbar's amber rule
+  const { scrollYProgress } = useScroll()
+  const progress = useSpring(scrollYProgress, { stiffness: 120, damping: 30, mass: 0.3 })
 
   const links = [
     { to: '/',        label: tx.home },
@@ -43,17 +48,27 @@ export default function Navbar() {
 
           {/* Desktop nav */}
           <nav className="hidden md:flex items-center gap-5">
-            {links.map(({ to, label }) => (
-              <Link
-                key={to}
-                to={to}
-                className={`font-body text-xs font-bold uppercase tracking-widest transition-colors ${
-                  location.pathname === to ? 'text-amber' : 'text-parchment/70 hover:text-parchment'
-                }`}
-              >
-                {label}
-              </Link>
-            ))}
+            {links.map(({ to, label }) => {
+              const active = location.pathname === to
+              return (
+                <Link
+                  key={to}
+                  to={to}
+                  aria-current={active ? 'page' : undefined}
+                  className={`group relative font-body text-xs font-bold uppercase tracking-widest transition-colors ${
+                    active ? 'text-amber' : 'text-parchment/70 hover:text-parchment'
+                  }`}
+                >
+                  {label}
+                  {/* Animated amber underline */}
+                  <span
+                    className={`pointer-events-none absolute -bottom-1.5 left-0 right-0 h-px bg-amber origin-center transition-transform duration-300 ${
+                      active ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'
+                    }`}
+                  />
+                </Link>
+              )
+            })}
 
             {/* Language toggle */}
             <button
@@ -91,8 +106,13 @@ export default function Navbar() {
           </div>
         </div>
 
-        {/* Bottom amber rule */}
-        <div className="h-px bg-amber/40" />
+        {/* Bottom amber rule + reading-progress fill */}
+        <div className="relative h-px bg-amber/40">
+          <motion.div
+            className="absolute inset-y-0 left-0 right-0 bg-amber origin-left"
+            style={{ scaleX: progress }}
+          />
+        </div>
 
         {/* Mobile drawer */}
         {open && (

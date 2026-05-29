@@ -5,11 +5,16 @@ export default function DishCard({ name, description, price, image, highlight, s
     <motion.div
       whileHover={{ scale: 1.02, y: -2 }}
       transition={{ duration: 0.2 }}
-      className={`vintage-card flex flex-col overflow-hidden ${highlight ? 'ring-2 ring-amber ring-offset-1 ring-offset-paper' : ''}`}
+      className={`group vintage-card flex flex-col overflow-hidden ${highlight ? 'ring-2 ring-amber ring-offset-1 ring-offset-paper' : ''}`}
     >
       {image && (
         <div className="aspect-[4/3] overflow-hidden bg-navy/10">
-          <img src={image} alt={name} loading="lazy" className="w-full h-full object-cover" />
+          <img
+            src={image}
+            alt={name}
+            loading="lazy"
+            className="w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-105"
+          />
         </div>
       )}
       <div className="p-5 flex flex-col flex-1">
